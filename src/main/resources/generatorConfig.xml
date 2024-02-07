@@ -124,7 +124,7 @@
                 3，XMLMAPPER：会生成Mapper接口，接口完全依赖XML；
             注意，如果context是MyBatis3Simple：只支持ANNOTATEDMAPPER和XMLMAPPER
         -->
-        <javaClientGenerator targetPackage="com.zyp.mango.mybatis.dao" type="XMLMAPPER"
+        <javaClientGenerator targetPackage="com.zyp.mango.mybatis.dao" type="ANNOTATEDMAPPER"
                              targetProject="src/main/java">
             <!-- 在targetPackage的基础上，根据数据库的schema再生成一层package，最终生成的类放在这个package下，默认为false -->
             <property name="enableSubPackages" value="true"/>
@@ -175,17 +175,17 @@
         <!--            &lt;!&ndash; 数据库表主键 &ndash;&gt;-->
         <!--            <generatedKey column="id" sqlStatement="Mysql" identity="true" />-->
         <!--        </table>-->
-        <table tableName="sys_config"></table>
-        <table tableName="sys_dept"></table>
-        <table tableName="sys_dict"></table>
-        <table tableName="sys_log"></table>
-        <table tableName="sys_login_log"></table>
-        <table tableName="sys_menu"></table>
-        <table tableName="sys_role"></table>
-        <table tableName="sys_role_dept"></table>
-        <table tableName="sys_role_menu"></table>
-        <table tableName="sys_user"></table>
-        <table tableName="sys_user_role"></table>
+        <table tableName="sys_config" schema="mango"></table>
+        <table tableName="sys_dept" schema="mango"></table>
+        <table tableName="sys_dict" schema="mango"></table>
+        <table tableName="sys_log" schema="mango"></table>
+        <table tableName="sys_login_log" schema="mango"></table>
+        <table tableName="sys_menu" schema="mango"></table>
+        <table tableName="sys_role" schema="mango"></table>
+        <table tableName="sys_role_dept" schema="mango"></table>
+        <table tableName="sys_role_menu" schema="mango"></table>
+        <table tableName="sys_user" schema="mango"></table>
+        <table tableName="sys_user_role" schema="mango"></table>
 
 
         <table tableName="userinfo">
